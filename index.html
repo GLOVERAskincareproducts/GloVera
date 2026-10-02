@@ -1,997 +1,655 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Glovera | جلوفيرا</title>
 
     <meta name="description"
-          content="Glovera - التوهج الأنثوي والبساطة والرقي بأدق التفاصيل. عناية بالبشرة والشعر والجسم.">
+          content="Glovera - التوهج الأنثوي والبساطة والرقي بأدق التفاصيل.">
 
-    <meta name="theme-color" content="#3f5d49">
+    <link rel="stylesheet"
+          href="style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
-          rel="stylesheet">
 
+<body>
 
-    <style>
 
-        /* =========================
-           BASIC
-        ========================= */
+<!-- HEADER -->
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<header>
 
-        html {
-            scroll-behavior: smooth;
-        }
+    <a href="#home" class="logo">
 
-        body {
-            font-family: "Cairo", sans-serif;
-            background: #fbf9f5;
-            color: #304538;
-            line-height: 1.8;
-            overflow-x: hidden;
-        }
+        <img src="glovera.png"
+             alt="Glovera">
 
-        img {
-            max-width: 100%;
-        }
+    </a>
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
 
-        button {
-            font-family: inherit;
-        }
+    <nav>
 
+        <a href="#home">
+            الرئيسية
+        </a>
 
-        /* =========================
-           VARIABLES
-        ========================= */
+        <a href="#categories">
+            الأقسام
+        </a>
 
-        :root {
-            --green: #3f5d49;
-            --dark-green: #293c30;
-            --soft-green: #e8eee8;
+        <a href="#products">
+            المنتجات
+        </a>
 
-            --pink: #bd7f89;
-            --soft-pink: #f3e5e7;
+        <a href="#ingredients">
+            المكونات
+        </a>
 
-            --cream: #fbf9f5;
-            --beige: #f3efe7;
+        <a href="#about">
+            عن جلوفيرا
+        </a>
 
-            --text: #304538;
-            --muted: #747e77;
+    </nav>
 
-            --border: #e7e1d8;
 
-            --shadow:
-                0 20px 60px rgba(43, 62, 50, 0.10);
-        }
+    <a href="#products"
+       class="header-button">
 
+        تسوقي الآن
 
-        /* =========================
-           HEADER
-        ========================= */
+    </a>
 
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+</header>
 
-            height: 82px;
 
-            background: rgba(251,249,245,0.94);
-            backdrop-filter: blur(18px);
 
-            border-bottom: 1px solid var(--border);
+<!-- HERO -->
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+<main>
 
-            padding: 0 7%;
-        }
+<section class="hero"
+         id="home">
 
-        .logo {
-            display: flex;
-            align-items: center;
 
-            flex-shrink: 0;
-        }
+    <div class="hero-content">
 
-        .logo img {
-            width: 145px;
-            height: auto;
-            display: block;
-        }
 
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 30px;
+        <p class="eyebrow">
+            GLOVERA • BEAUTY & CARE
+        </p>
 
-            font-size: 13px;
-        }
 
-        nav a {
-            color: #536159;
-            transition: 0.3s;
-        }
+        <h1>
 
-        nav a:hover {
-            color: var(--pink);
-        }
+            التوهج الأنثوي
 
-        .header-btn {
-            background: var(--green);
-            color: white;
+            <span>
+                بأدق التفاصيل.
+            </span>
 
-            padding: 10px 23px;
+        </h1>
 
-            border-radius: 30px;
 
-            font-size: 13px;
+        <p class="hero-text">
 
-            transition: 0.3s;
-        }
+            عناية بسيطة وراقية تجمع بين
+            المكونات الفعالة والتفاصيل الجميلة،
+            لتمنحي بشرتك وشعرك وجسمك
+            العناية التي تستحقينها.
 
-        .header-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(63,93,73,0.20);
-        }
+        </p>
 
 
-        /* =========================
-           HERO
-        ========================= */
+        <div class="hero-buttons">
 
-        .hero {
-            min-height: 680px;
+            <a href="#products"
+               class="primary-button">
 
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
+                اكتشفي منتجاتنا
 
-            padding: 75px 9%;
+            </a>
 
-            position: relative;
-            overflow: hidden;
 
-            background:
-                radial-gradient(
-                    circle at 80% 35%,
-                    #e6eee6 0,
-                    transparent 35%
-                ),
-                var(--cream);
-        }
+            <a href="#about"
+               class="secondary-button">
 
-        .hero::before {
-            content: "";
+                عن Glovera
 
-            position: absolute;
+            </a>
 
-            width: 350px;
-            height: 350px;
+        </div>
 
-            border-radius: 50%;
 
-            background: #f4e3e5;
+    </div>
 
-            opacity: 0.45;
 
-            left: -180px;
-            bottom: -150px;
-        }
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
+    <div class="hero-visual">
 
-            padding-left: 25px;
-        }
 
-        .eyebrow {
-            color: var(--pink);
+        <div class="hero-circle"></div>
 
-            font-size: 11px;
 
-            letter-spacing: 3px;
+        <div class="hero-card">
 
-            font-weight: 700;
 
-            margin-bottom: 15px;
-        }
+            <img src="glovera.png"
+                 alt="Glovera Logo"
+                 class="hero-logo">
 
-        .hero h1 {
-            font-family: "Playfair Display", serif;
 
-            font-size: clamp(48px, 6vw, 78px);
+            <div class="hero-line"></div>
 
-            line-height: 1.15;
 
-            font-weight: 500;
+            <p>
+                BEAUTY & CARE
+            </p>
 
-            color: var(--text);
 
-            margin-bottom: 25px;
-        }
+            <span>
+                Made with Love
+            </span>
 
-        .hero h1 span {
-            color: var(--pink);
-        }
 
-        .hero-description {
-            color: var(--muted);
+        </div>
 
-            max-width: 510px;
 
-            font-size: 15px;
+    </div>
 
-            line-height: 2.1;
-        }
 
-        .hero-buttons {
-            margin-top: 32px;
+</section>
 
-            display: flex;
 
-            gap: 12px;
 
-            align-items: center;
-        }
+<!-- CATEGORIES -->
 
-        .primary-btn {
-            background: var(--green);
-            color: white;
+<section id="categories"
+         class="section">
 
-            padding: 13px 28px;
 
-            border-radius: 30px;
+    <div class="section-title">
 
-            font-size: 13px;
+        <small>
+            EXPLORE GLOVERA
+        </small>
 
-            transition: 0.3s;
-        }
+        <h2>
+            اختاري عنايتك
+        </h2>
 
-        .primary-btn:hover {
-            transform: translateY(-3px);
+        <p>
+            كل ما تحتاجينه لروتين عناية متكامل.
+        </p>
 
-            box-shadow:
-                0 15px 35px rgba(63,93,73,0.20);
-        }
+    </div>
 
-        .secondary-btn {
-            border: 1px solid #cbd2cb;
 
-            color: #526057;
 
-            padding: 12px 25px;
+    <div class="categories">
 
-            border-radius: 30px;
 
-            font-size: 13px;
+        <a href="#products"
+           class="category skin">
 
-            transition: 0.3s;
-        }
+            <span>
+                01
+            </span>
 
-        .secondary-btn:hover {
-            border-color: var(--pink);
-            color: var(--pink);
-        }
+            <h3>
+                البشرة
+            </h3>
 
+            <p>
+                ترطيب • إشراقة • عناية
+            </p>
 
-        /* =========================
-           HERO VISUAL
-        ========================= */
+        </a>
 
-        .hero-visual {
-            min-height: 520px;
 
-            position: relative;
 
-            display: flex;
+        <a href="#products"
+           class="category hair">
 
-            align-items: center;
+            <span>
+                02
+            </span>
 
-            justify-content: center;
-        }
+            <h3>
+                الشعر
+            </h3>
 
-        .visual-circle {
-            width: 430px;
-            height: 430px;
+            <p>
+                تنظيف • ترطيب • قوة
+            </p>
 
-            border-radius: 50%;
+        </a>
 
-            background:
-                linear-gradient(
-                    145deg,
-                    #edf2ec,
-                    #dfe9df
-                );
 
-            position: absolute;
-        }
 
-        .visual-card {
-            width: 300px;
-            min-height: 360px;
+        <a href="#products"
+           class="category body">
 
-            position: relative;
+            <span>
+                03
+            </span>
 
-            z-index: 2;
+            <h3>
+                الجسم
+            </h3>
 
-            background: rgba(255,255,255,0.70);
+            <p>
+                نعومة • ترطيب • توهج
+            </p>
 
-            backdrop-filter: blur(12px);
+        </a>
 
-            border: 1px solid rgba(255,255,255,0.9);
 
-            border-radius: 30px;
+    </div>
 
-            box-shadow:
-                0 35px 80px rgba(45,65,52,0.15);
 
-            display: flex;
+</section>
 
-            flex-direction: column;
 
-            align-items: center;
 
-            justify-content: center;
+<!-- PRODUCTS -->
 
-            text-align: center;
+<section id="products"
+         class="section products">
 
-            padding: 35px;
-        }
 
-        .visual-logo {
-            width: 175px;
+    <div class="section-title">
 
-            margin-bottom: 25px;
-        }
+        <small>
+            GLOVERA COLLECTION
+        </small>
 
-        .visual-line {
-            width: 55px;
-            height: 1px;
+        <h2>
+            منتجاتنا
+        </h2>
 
-            background: var(--pink);
+        <p>
+            اكتشفي مجموعة من منتجات جلوفيرا.
+        </p>
 
-            margin-bottom: 20px;
-        }
+    </div>
 
-        .visual-title {
-            font-family: "Playfair Display", serif;
 
-            color: var(--green);
 
-            font-size: 25px;
+    <div class="products-grid">
 
-            margin-bottom: 8px;
-        }
 
-        .visual-subtitle {
-            font-size: 10px;
+        <article class="product-card">
 
-            letter-spacing: 2px;
+            <div class="product-photo">
 
-            color: #778079;
-        }
+                <span>
+                    Glovera
+                </span>
 
-        .decor-one,
-        .decor-two {
-            position: absolute;
+            </div>
 
-            border-radius: 50%;
-        }
+            <div class="product-info">
 
-        .decor-one {
-            width: 85px;
-            height: 85px;
+                <small>
+                    FACE CARE
+                </small>
 
-            background: #f0dadd;
+                <h3>
+                    Youth Glow Serum
+                </h3>
 
-            top: 55px;
-            right: 5%;
-        }
+                <p>
+                    فيتامين C + نياسيناميد
+                    + حمض الهيالورونيك.
+                </p>
 
-        .decor-two {
-            width: 55px;
-            height: 55px;
+                <strong>
+                    220 جنيه
+                </strong>
 
-            background: #d5e2d5;
+            </div>
 
-            bottom: 45px;
-            left: 5%;
-        }
+        </article>
 
 
-        /* =========================
-           SECTION
-        ========================= */
 
-        section {
-            padding: 100px 8%;
-        }
+        <article class="product-card">
 
-        .section-heading {
-            text-align: center;
+            <div class="product-photo">
 
-            max-width: 650px;
+                <span>
+                    Glovera
+                </span>
 
-            margin: 0 auto 55px;
-        }
+            </div>
 
-        .section-heading small {
-            color: var(--pink);
+            <div class="product-info">
 
-            font-size: 10px;
+                <small>
+                    FACE CARE
+                </small>
 
-            letter-spacing: 3px;
+                <h3>
+                    Daily Radiance Gel
+                </h3>
 
-            font-weight: 700;
-        }
+                <p>
+                    ترطيب يومي بتركيبة
+                    خفيفة ومريحة.
+                </p>
 
-        .section-heading h2 {
-            font-family: "Playfair Display", serif;
+                <strong>
+                    130 جنيه
+                </strong>
 
-            color: var(--text);
+            </div>
 
-            font-size: clamp(36px, 5vw, 50px);
+        </article>
 
-            font-weight: 500;
 
-            margin: 8px 0 10px;
-        }
 
-        .section-heading p {
-            color: var(--muted);
+        <article class="product-card">
 
-            font-size: 13px;
-        }
+            <div class="product-photo">
 
+                <span>
+                    Glovera
+                </span>
 
-        /* =========================
-           CATEGORIES
-        ========================= */
+            </div>
 
-        .categories {
-            display: grid;
+            <div class="product-info">
 
-            grid-template-columns:
-                repeat(3, 1fr);
+                <small>
+                    BODY CARE
+                </small>
 
-            gap: 20px;
-        }
+                <h3>
+                    Skin Renewal
+                </h3>
 
-        .category {
-            min-height: 280px;
+                <p>
+                    عناية بالبشرة الجافة
+                    والخشنة.
+                </p>
 
-            border-radius: 25px;
+                <strong>
+                    165 جنيه
+                </strong>
 
-            padding: 30px;
+            </div>
 
-            position: relative;
+        </article>
 
-            overflow: hidden;
 
-            display: flex;
 
-            flex-direction: column;
+        <article class="product-card">
 
-            justify-content: flex-end;
+            <div class="product-photo">
 
-            transition: 0.4s;
+                <span>
+                    Glovera
+                </span>
 
-            border: 1px solid rgba(255,255,255,0.7);
-        }
+            </div>
 
-        .category:hover {
-            transform: translateY(-7px);
+            <div class="product-info">
 
-            box-shadow: var(--shadow);
-        }
+                <small>
+                    HAIR CARE
+                </small>
 
-        .category::before {
-            content: "";
+                <h3>
+                    Intensive Care Shampoo
+                </h3>
 
-            position: absolute;
+                <p>
+                    تنظيف لطيف وعناية
+                    يومية بالشعر.
+                </p>
 
-            width: 210px;
-            height: 210px;
+                <strong>
+                    160 جنيه
+                </strong>
 
-            border-radius: 50%;
+            </div>
 
-            background: rgba(255,255,255,0.38);
+        </article>
 
-            top: -75px;
-            left: -60px;
-        }
 
-        .category::after {
-            content: "";
+    </div>
 
-            position: absolute;
 
-            width: 130px;
-            height: 130px;
+</section>
 
-            border-radius: 50%;
 
-            background: rgba(255,255,255,0.20);
 
-            right: -50px;
-            bottom: -40px;
-        }
+<!-- INGREDIENTS -->
 
-        .category:nth-child(1) {
-            background: #eee7dc;
-        }
+<section id="ingredients"
+         class="section">
 
-        .category:nth-child(2) {
-            background: #e3ece3;
-        }
 
-        .category:nth-child(3) {
-            background: #f1e0e3;
-        }
+    <div class="section-title">
 
-        .category-content {
-            position: relative;
-            z-index: 2;
-        }
+        <small>
+            ACTIVE INGREDIENTS
+        </small>
 
-        .category-number {
-            color: var(--pink);
+        <h2>
+            رحلة المكونات الفعالة
+        </h2>
 
-            font-family: "Playfair Display", serif;
+        <p>
+            لأن معرفة مكونات منتجاتك جزء من العناية.
+        </p>
 
-            font-size: 18px;
+    </div>
 
-            margin-bottom: 5px;
-        }
 
-        .category h3 {
-            font-family: "Playfair Display", serif;
 
-            font-size: 34px;
+    <div class="ingredients-grid">
 
-            font-weight: 500;
 
-            color: var(--text);
-        }
+        <div class="ingredient">
 
-        .category p {
-            color: #6d776f;
+            <span>
+                01
+            </span>
 
-            font-size: 11px;
-        }
+            <h3>
+                Niacinamide
+            </h3>
 
+            <p>
+                مكوّن متعدد الاستخدامات
+                لدعم حاجز البشرة وتحسين
+                مظهرها.
+            </p>
 
-        /* =========================
-           PRODUCTS
-        ========================= */
+        </div>
 
-        .products-section {
-            background: #f3f0e9;
-        }
 
-        .product-grid {
-            display: grid;
 
-            grid-template-columns:
-                repeat(4, 1fr);
+        <div class="ingredient">
 
-            gap: 22px;
-        }
+            <span>
+                02
+            </span>
 
-        .product-card {
-            background: white;
+            <h3>
+                Hyaluronic Acid
+            </h3>
 
-            border-radius: 22px;
+            <p>
+                يساعد على جذب الماء
+                والحفاظ على ترطيب البشرة.
+            </p>
 
-            overflow: hidden;
+        </div>
 
-            border: 1px solid var(--border);
 
-            transition: 0.35s;
-        }
 
-        .product-card:hover {
-            transform: translateY(-7px);
+        <div class="ingredient">
 
-            box-shadow:
-                0 25px 50px rgba(45,60,48,0.11);
-        }
+            <span>
+                03
+            </span>
 
-        .product-image {
-            height: 285px;
+            <h3>
+                Shea Butter
+            </h3>
 
-            background:
-                radial-gradient(
-                    circle at center,
-                    #faf6f1,
-                    #e7eee7
-                );
+            <p>
+                يساعد على ترطيب وتنعيم
+                البشرة والشعر.
+            </p>
 
-            display: flex;
+        </div>
 
-            align-items: center;
 
-            justify-content: center;
 
-            position: relative;
-        }
+        <div class="ingredient">
 
-        .product-placeholder {
-            width: 115px;
-            height: 195px;
+            <span>
+                04
+            </span>
 
-            border-radius:
-                18px 18px 9px 9px;
+            <h3>
+                Urea
+            </h3>
 
-            background:
-                linear-gradient(
-                    145deg,
-                    #ffffff,
-                    #e6e1d8
-                );
+            <p>
+                مكوّن مرطب للعناية
+                بالبشرة الجافة والخشنة.
+            </p>
 
-            box-shadow:
-                0 20px 35px rgba(50,65,55,0.14);
+        </div>
 
-            display: flex;
 
-            align-items: center;
+    </div>
 
-            justify-content: center;
 
-            text-align: center;
+</section>
 
-            color: var(--green);
 
-            font-family: "Playfair Display", serif;
 
-            font-size: 18px;
-        }
+<!-- ABOUT -->
 
-        .product-placeholder::before {
-            content: "";
+<section id="about"
+         class="about">
 
-            position: absolute;
 
-            width: 45px;
-            height: 16px;
+    <div class="about-content">
 
-            background: #536a59;
 
-            top: 42px;
+        <small>
+            ABOUT GLOVERA
+        </small>
 
-            border-radius: 5px;
-        }
 
-        .product-info {
-            padding: 20px;
-        }
+        <h2>
+            عناية تبدأ من التفاصيل.
+        </h2>
 
-        .product-category {
-            color: var(--pink);
 
-            font-size: 9px;
+        <p>
 
-            letter-spacing: 1px;
+            Glovera هي مساحة للعناية تجمع
+            بين البساطة والرقي والاهتمام
+            الحقيقي بالتفاصيل.
 
-            font-weight: 700;
-        }
+            نؤمن أن روتين العناية لا يحتاج
+            أن يكون معقدًا، بل يحتاج إلى
+            منتجات مفهومة ومكونات فعالة
+            وتجربة جميلة.
 
-        .product-info h3 {
-            color: var(--text);
+        </p>
 
-            font-size: 17px;
 
-            margin: 4px 0 6px;
+        <strong>
+            مصنوعة بحب ♡
+        </strong>
 
-            font-weight: 600;
-        }
 
-        .product-info p {
-            color: var(--muted);
+    </div>
 
-            font-size: 11px;
 
-            line-height: 1.9;
+</section>
 
-            min-height: 63px;
-        }
 
-        .product-bottom {
-            display: flex;
 
-            align-items: center;
+<!-- CTA -->
 
-            justify-content: space-between;
+<section class="cta">
 
-            gap: 8px;
 
-            margin-top: 12px;
-        }
+    <div>
 
-        .price {
-            color: var(--green);
+        <small>
+            GLOVERA
+        </small>
 
-            font-size: 14px;
+        <h2>
+            جاهزة تبدأي روتينك؟
+        </h2>
 
-            font-weight: 700;
-        }
+        <p>
+            اختاري منتجاتك وتواصلي معنا مباشرة.
+        </p>
 
-        .order-small {
-            background: var(--green);
+    </div>
 
-            color: white;
 
-            border-radius: 20px;
+    <a href="https://wa.me/201000000000"
+       target="_blank">
 
-            padding: 7px 12px;
+        اطلبي عبر WhatsApp
 
-            font-size: 10px;
-        }
+    </a>
 
 
-        /* =========================
-           INGREDIENTS
-        ========================= */
+</section>
 
-        .ingredients-section {
-            background: #fbfaf7;
-        }
 
-        .ingredient-grid {
-            display: grid;
+</main>
 
-            grid-template-columns:
-                repeat(4, 1fr);
 
-            gap: 18px;
-        }
 
-        .ingredient-card {
-            background: white;
+<!-- FOOTER -->
 
-            border: 1px solid var(--border);
+<footer>
 
-            border-radius: 20px;
 
-            padding: 28px 22px;
+    <img src="glovera.png"
+         alt="Glovera">
 
-            min-height: 205px;
 
-            transition: 0.3s;
-        }
+    <p>
+        التوهج الأنثوي والبساطة والرقي
+        بأدق التفاصيل.
+    </p>
 
-        .ingredient-card:hover {
-            transform: translateY(-5px);
 
-            box-shadow: var(--shadow);
-        }
+    <span>
+        © 2026 Glovera
+    </span>
 
-        .ingredient-number {
-            color: var(--pink);
 
-            font-family: "Playfair Display", serif;
+</footer>
 
-            font-size: 24px;
-        }
 
-        .ingredient-card h3 {
-            font-family: "Playfair Display", serif;
 
-            color: var(--green);
+<script src="script.js"></script>
 
-            font-size: 23px;
 
-            margin: 8px 0;
-        }
+</body>
 
-        .ingredient-card p {
-            color: var(--muted);
-
-            font-size: 11px;
-
-            line-height: 2;
-        }
-
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about-section {
-            background: var(--soft-green);
-
-            text-align: center;
-
-            position: relative;
-
-            overflow: hidden;
-        }
-
-        .about-section::before {
-            content: "";
-
-            position: absolute;
-
-            width: 300px;
-            height: 300px;
-
-            border-radius: 50%;
-
-            background: rgba(255,255,255,0.25);
-
-            left: -150px;
-            top: -100px;
-        }
-
-        .about-content {
-            max-width: 760px;
-
-            margin: auto;
-
-            position: relative;
-        }
-
-        .about-content h2 {
-            font-family: "Playfair Display", serif;
-
-            font-size: clamp(38px, 5vw, 52px);
-
-            font-weight: 500;
-
-            color: var(--green);
-        }
-
-        .about-content p {
-            color: #657168;
-
-            font-size: 14px;
-
-            line-height: 2.2;
-
-            margin-top: 20px;
-        }
-
-        .signature {
-            color: var(--pink);
-
-            font-family: "Playfair Display", serif;
-
-            font-size: 21px;
-
-            margin-top: 25px;
-        }
-
-
-        /* =========================
-           CTA
-        ========================= */
-
-        .cta {
-            background: var(--green);
-
-            color: white;
-
-            padding: 65px 9%;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 30px;
-        }
-
-        .cta small {
-            color: #d9b2b8;
-
-            font-size: 10px;
-
-            letter-spacing: 2px;
-        }
-
-        .cta h2 {
-            font-family: "Playfair Display", serif;
-
-            font-size: 42px;
-
-            font-weight: 500;
-
-            margin-top: 4px;
-        }
-
-        .cta p {
-            color: #dbe4dd;
-
-            font-size: 12px;
-        }
-
-        .cta-button {
-            background: white;
-
-            color: var(--green);
-
-            padding: 14px 27px;
-
-            border-radius: 30px;
-
-            font-size: 13px;
-
-            white-space: nowrap;
-
-            transition: 0.3s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-
-            box-shadow:
-                0 12px 30px rgba(0,0,0,0.15);
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: var(--dark-green);
-
-            color: #cbd5ce;
-
-            padding: 42px 8%;
-
-            display: grid;
-
-            grid-template-columns:
-                1fr 1.5fr 1fr;
-
-            align-items: center;
-
-            gap: 20px;
-
-            font-size: 10px;
-        }
-
-        footer .logo img {
-            width: 125px;
-
-            filter: brightness(0) invert(1);
-
-            opacity: 0.95;
-        }
-
-        .footer-center {
-            text-align: center;
-        }
-
-        .footer-right {
-            text-align: left;
-        }
-
-
-        /* =========================
-           WHATSAPP FLOAT
-        ========================= */
-
-        .whatsapp-f
+    </html>
