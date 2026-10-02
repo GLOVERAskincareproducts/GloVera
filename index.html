@@ -3,18 +3,617 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-    <title>Glovera | جلوفيرا</title>
+<title>Glovera | جلوفيرا</title>
 
-    <meta name="description"
-          content="Glovera - التوهج الأنثوي والبساطة والرقي بأدق التفاصيل.">
+<meta name="description"
+content="Glovera - التوهج الأنثوي والبساطة والرقي بأدق التفاصيل.">
 
-    <link rel="stylesheet"
-          href="style.css">
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+rel="stylesheet">
+
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Cairo",sans-serif;
+    background:#faf8f4;
+    color:#304638;
+    line-height:1.8;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+
+/* =========================
+   COLORS
+========================= */
+
+:root{
+
+    --green:#405d4a;
+
+    --dark:#26382d;
+
+    --sage:#e5ece5;
+
+    --pink:#bd808b;
+
+    --light-pink:#f2e2e5;
+
+    --cream:#faf8f4;
+
+    --beige:#f1ece3;
+
+    --text:#304638;
+
+    --muted:#737c75;
+
+    --border:#e8e1d7;
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+
+    height:82px;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    background:rgba(250,248,244,.92);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid var(--border);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 7%;
+
+}
+
+
+.logo{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:29px;
+
+    letter-spacing:1px;
+
+    color:var(--green);
+
+}
+
+
+.logo span{
+
+    color:var(--pink);
+
+}
+
+
+nav{
+
+    display:flex;
+
+    gap:32px;
+
+    font-size:13px;
+
+    color:#56645b;
+
+}
+
+
+nav a{
+
+    transition:.3s;
+
+}
+
+
+nav a:hover{
+
+    color:var(--pink);
+
+}
+
+
+.header-button{
+
+    background:var(--green);
+
+    color:white;
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    transition:.3s;
+
+}
+
+
+.header-button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(50,75,58,.18);
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    min-height:720px;
+
+    padding:80px 8%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:50px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+    radial-gradient(
+        circle at 78% 45%,
+        #e3ece3 0,
+        transparent 34%
+    ),
+
+    var(--cream);
+
+}
+
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    background:#f2e1e4;
+
+    opacity:.45;
+
+    left:-230px;
+
+    bottom:-220px;
+
+}
+
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+.eyebrow{
+
+    color:var(--pink);
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+
+.hero h1{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(48px,6vw,78px);
+
+    line-height:1.12;
+
+    font-weight:500;
+
+    color:var(--text);
+
+    margin-bottom:25px;
+
+}
+
+
+.hero h1 span{
+
+    color:var(--pink);
+
+}
+
+
+.hero-text{
+
+    max-width:500px;
+
+    color:var(--muted);
+
+    font-size:15px;
+
+    line-height:2.1;
+
+}
+
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:32px;
+
+}
+
+
+.primary{
+
+    background:var(--green);
+
+    color:white;
+
+    padding:13px 28px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    transition:.3s;
+
+}
+
+
+.primary:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(50,75,58,.2);
+
+}
+
+
+.secondary{
+
+    border:1px solid #cbd1cb;
+
+    color:#536158;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+}
+
+
+.secondary:hover{
+
+    border-color:var(--pink);
+
+    color:var(--pink);
+
+}
+
+
+/* =========================
+   HERO VISUAL
+========================= */
+
+.hero-visual{
+
+    height:520px;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+.hero-circle{
+
+    position:absolute;
+
+    width:440px;
+
+    height:440px;
+
+    border-radius:50%;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #edf2ec,
+        #dce7dc
+    );
+
+}
+
+
+.hero-card{
+
+    width:310px;
+
+    height:390px;
+
+    position:relative;
+
+    z-index:2;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.95),
+        rgba(247,244,238,.82)
+    );
+
+    border:1px solid rgba(255,255,255,.9);
+
+    box-shadow:
+
+    0 35px 80px
+    rgba(40,60,48,.16);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:35px;
+
+}
+
+
+.hero-logo{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:38px;
+
+    color:var(--green);
+
+}
+
+
+.hero-logo span{
+
+    color:var(--pink);
+
+}
+
+
+.hero-line{
+
+    width:55px;
+
+    height:1px;
+
+    background:var(--pink);
+
+    margin:18px 0;
+
+}
+
+
+.hero-card small{
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+    color:#7b837d;
+
+}
+
+
+.hero-card p{
+
+    margin-top:25px;
+
+    color:#777f79;
+
+    font-size:12px;
+
+}
+
+
+.decor{
+
+    position:absolute;
+
+    border-radius:50%;
+
+}
+
+
+.decor-one{
+
+    width:90px;
+
+    height:90px;
+
+    background:#f0d7db;
+
+    right:4%;
+
+    top:50px;
+
+}
+
+
+.decor-two{
+
+    width:55px;
+
+    height:55px;
+
+    background:#d3e1d3;
+
+    left:5%;
+
+    bottom:40px;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:850px){
+
+    header{
+
+        height:72px;
+
+        padding:0 5%;
+
+    }
+
+    nav{
+
+        display:none;
+
+    }
+
+    .header-button{
+
+        display:none;
+
+    }
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        padding:65px 7%;
+
+    }
+
+    .hero-text{
+
+        margin:auto;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+    }
+
+    .hero-visual{
+
+        height:430px;
+
+    }
+
+    .hero-circle{
+
+        width:320px;
+
+        height:320px;
+
+    }
+
+    .hero-card{
+
+        width:260px;
+
+        height:330px;
+
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -26,45 +625,42 @@
 
 <header>
 
-    <a href="#home" class="logo">
-
-        <img src="glovera.png"
-             alt="Glovera">
-
-    </a>
+<a href="#" class="logo">
+Glo<span>Vera</span>
+</a>
 
 
-    <nav>
+<nav>
 
-        <a href="#home">
-            الرئيسية
-        </a>
+<a href="#home">
+الرئيسية
+</a>
 
-        <a href="#categories">
-            الأقسام
-        </a>
+<a href="#categories">
+الأقسام
+</a>
 
-        <a href="#products">
-            المنتجات
-        </a>
+<a href="#products">
+المنتجات
+</a>
 
-        <a href="#ingredients">
-            المكونات
-        </a>
+<a href="#ingredients">
+المكونات
+</a>
 
-        <a href="#about">
-            عن جلوفيرا
-        </a>
+<a href="#about">
+عن جلوفيرا
+</a>
 
-    </nav>
+</nav>
 
 
-    <a href="#products"
-       class="header-button">
+<a href="#products"
+class="header-button">
 
-        تسوقي الآن
+تسوقي الآن
 
-    </a>
+</a>
 
 </header>
 
@@ -72,584 +668,104 @@
 
 <!-- HERO -->
 
-<main>
-
 <section class="hero"
-         id="home">
+id="home">
 
 
-    <div class="hero-content">
+<div class="hero-content">
 
+<div class="eyebrow">
 
-        <p class="eyebrow">
-            GLOVERA • BEAUTY & CARE
-        </p>
+GLOVERA • BEAUTY & CARE
 
+</div>
 
-        <h1>
 
-            التوهج الأنثوي
+<h1>
 
-            <span>
-                بأدق التفاصيل.
-            </span>
+التوهج الأنثوي
 
-        </h1>
+<br>
 
+<span>
+بأدق التفاصيل.
+</span>
 
-        <p class="hero-text">
+</h1>
 
-            عناية بسيطة وراقية تجمع بين
-            المكونات الفعالة والتفاصيل الجميلة،
-            لتمنحي بشرتك وشعرك وجسمك
-            العناية التي تستحقينها.
 
-        </p>
+<p class="hero-text">
 
+عناية تجمع بين البساطة والرقي
+والمكونات الفعالة، لتمنحي بشرتك
+وشعرك وجسمك تجربة عناية
+تستحقينها.
 
-        <div class="hero-buttons">
+</p>
 
-            <a href="#products"
-               class="primary-button">
 
-                اكتشفي منتجاتنا
+<div class="hero-buttons">
 
-            </a>
+<a href="#products"
+class="primary">
 
+اكتشفي منتجاتنا
 
-            <a href="#about"
-               class="secondary-button">
+</a>
 
-                عن Glovera
 
-            </a>
+<a href="#about"
+class="secondary">
 
-        </div>
+عن Glovera
 
+</a>
 
-    </div>
+</div>
 
+</div>
 
 
-    <div class="hero-visual">
 
+<div class="hero-visual">
 
-        <div class="hero-circle"></div>
+<div class="hero-circle"></div>
 
 
-        <div class="hero-card">
+<div class="hero-card">
 
+<div class="hero-logo">
 
-            <img src="glovera.png"
-                 alt="Glovera Logo"
-                 class="hero-logo">
+Glo<span>Vera</span>
 
+</div>
 
-            <div class="hero-line"></div>
 
+<div class="hero-line"></div>
 
-            <p>
-                BEAUTY & CARE
-            </p>
 
+<small>
 
-            <span>
-                Made with Love
-            </span>
+BEAUTY & CARE
 
+</small>
 
-        </div>
 
+<p>
 
-    </div>
+التوهج الأنثوي والبساطة
+والرقي بأدق التفاصيل.
 
+</p>
 
-</section>
+</div>
 
 
+<div class="decor decor-one"></div>
 
-<!-- CATEGORIES -->
+<div class="decor decor-two"></div>
 
-<section id="categories"
-         class="section">
+</div>
 
 
-    <div class="section-title">
-
-        <small>
-            EXPLORE GLOVERA
-        </small>
-
-        <h2>
-            اختاري عنايتك
-        </h2>
-
-        <p>
-            كل ما تحتاجينه لروتين عناية متكامل.
-        </p>
-
-    </div>
-
-
-
-    <div class="categories">
-
-
-        <a href="#products"
-           class="category skin">
-
-            <span>
-                01
-            </span>
-
-            <h3>
-                البشرة
-            </h3>
-
-            <p>
-                ترطيب • إشراقة • عناية
-            </p>
-
-        </a>
-
-
-
-        <a href="#products"
-           class="category hair">
-
-            <span>
-                02
-            </span>
-
-            <h3>
-                الشعر
-            </h3>
-
-            <p>
-                تنظيف • ترطيب • قوة
-            </p>
-
-        </a>
-
-
-
-        <a href="#products"
-           class="category body">
-
-            <span>
-                03
-            </span>
-
-            <h3>
-                الجسم
-            </h3>
-
-            <p>
-                نعومة • ترطيب • توهج
-            </p>
-
-        </a>
-
-
-    </div>
-
-
-</section>
-
-
-
-<!-- PRODUCTS -->
-
-<section id="products"
-         class="section products">
-
-
-    <div class="section-title">
-
-        <small>
-            GLOVERA COLLECTION
-        </small>
-
-        <h2>
-            منتجاتنا
-        </h2>
-
-        <p>
-            اكتشفي مجموعة من منتجات جلوفيرا.
-        </p>
-
-    </div>
-
-
-
-    <div class="products-grid">
-
-
-        <article class="product-card">
-
-            <div class="product-photo">
-
-                <span>
-                    Glovera
-                </span>
-
-            </div>
-
-            <div class="product-info">
-
-                <small>
-                    FACE CARE
-                </small>
-
-                <h3>
-                    Youth Glow Serum
-                </h3>
-
-                <p>
-                    فيتامين C + نياسيناميد
-                    + حمض الهيالورونيك.
-                </p>
-
-                <strong>
-                    220 جنيه
-                </strong>
-
-            </div>
-
-        </article>
-
-
-
-        <article class="product-card">
-
-            <div class="product-photo">
-
-                <span>
-                    Glovera
-                </span>
-
-            </div>
-
-            <div class="product-info">
-
-                <small>
-                    FACE CARE
-                </small>
-
-                <h3>
-                    Daily Radiance Gel
-                </h3>
-
-                <p>
-                    ترطيب يومي بتركيبة
-                    خفيفة ومريحة.
-                </p>
-
-                <strong>
-                    130 جنيه
-                </strong>
-
-            </div>
-
-        </article>
-
-
-
-        <article class="product-card">
-
-            <div class="product-photo">
-
-                <span>
-                    Glovera
-                </span>
-
-            </div>
-
-            <div class="product-info">
-
-                <small>
-                    BODY CARE
-                </small>
-
-                <h3>
-                    Skin Renewal
-                </h3>
-
-                <p>
-                    عناية بالبشرة الجافة
-                    والخشنة.
-                </p>
-
-                <strong>
-                    165 جنيه
-                </strong>
-
-            </div>
-
-        </article>
-
-
-
-        <article class="product-card">
-
-            <div class="product-photo">
-
-                <span>
-                    Glovera
-                </span>
-
-            </div>
-
-            <div class="product-info">
-
-                <small>
-                    HAIR CARE
-                </small>
-
-                <h3>
-                    Intensive Care Shampoo
-                </h3>
-
-                <p>
-                    تنظيف لطيف وعناية
-                    يومية بالشعر.
-                </p>
-
-                <strong>
-                    160 جنيه
-                </strong>
-
-            </div>
-
-        </article>
-
-
-    </div>
-
-
-</section>
-
-
-
-<!-- INGREDIENTS -->
-
-<section id="ingredients"
-         class="section">
-
-
-    <div class="section-title">
-
-        <small>
-            ACTIVE INGREDIENTS
-        </small>
-
-        <h2>
-            رحلة المكونات الفعالة
-        </h2>
-
-        <p>
-            لأن معرفة مكونات منتجاتك جزء من العناية.
-        </p>
-
-    </div>
-
-
-
-    <div class="ingredients-grid">
-
-
-        <div class="ingredient">
-
-            <span>
-                01
-            </span>
-
-            <h3>
-                Niacinamide
-            </h3>
-
-            <p>
-                مكوّن متعدد الاستخدامات
-                لدعم حاجز البشرة وتحسين
-                مظهرها.
-            </p>
-
-        </div>
-
-
-
-        <div class="ingredient">
-
-            <span>
-                02
-            </span>
-
-            <h3>
-                Hyaluronic Acid
-            </h3>
-
-            <p>
-                يساعد على جذب الماء
-                والحفاظ على ترطيب البشرة.
-            </p>
-
-        </div>
-
-
-
-        <div class="ingredient">
-
-            <span>
-                03
-            </span>
-
-            <h3>
-                Shea Butter
-            </h3>
-
-            <p>
-                يساعد على ترطيب وتنعيم
-                البشرة والشعر.
-            </p>
-
-        </div>
-
-
-
-        <div class="ingredient">
-
-            <span>
-                04
-            </span>
-
-            <h3>
-                Urea
-            </h3>
-
-            <p>
-                مكوّن مرطب للعناية
-                بالبشرة الجافة والخشنة.
-            </p>
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-
-
-<!-- ABOUT -->
-
-<section id="about"
-         class="about">
-
-
-    <div class="about-content">
-
-
-        <small>
-            ABOUT GLOVERA
-        </small>
-
-
-        <h2>
-            عناية تبدأ من التفاصيل.
-        </h2>
-
-
-        <p>
-
-            Glovera هي مساحة للعناية تجمع
-            بين البساطة والرقي والاهتمام
-            الحقيقي بالتفاصيل.
-
-            نؤمن أن روتين العناية لا يحتاج
-            أن يكون معقدًا، بل يحتاج إلى
-            منتجات مفهومة ومكونات فعالة
-            وتجربة جميلة.
-
-        </p>
-
-
-        <strong>
-            مصنوعة بحب ♡
-        </strong>
-
-
-    </div>
-
-
-</section>
-
-
-
-<!-- CTA -->
-
-<section class="cta">
-
-
-    <div>
-
-        <small>
-            GLOVERA
-        </small>
-
-        <h2>
-            جاهزة تبدأي روتينك؟
-        </h2>
-
-        <p>
-            اختاري منتجاتك وتواصلي معنا مباشرة.
-        </p>
-
-    </div>
-
-
-    <a href="https://wa.me/201000000000"
-       target="_blank">
-
-        اطلبي عبر WhatsApp
-
-    </a>
-
-
-</section>
-
-
-</main>
-
-
-
-<!-- FOOTER -->
-
-<footer>
-
-
-    <img src="glovera.png"
-         alt="Glovera">
-
-
-    <p>
-        التوهج الأنثوي والبساطة والرقي
-        بأدق التفاصيل.
-    </p>
-
-
-    <span>
-        © 2026 Glovera
-    </span>
-
-
-</footer>
-
-
-
-<script src="script.js"></script>
-
-
-</body>
-
-    </html>
+    </section>
