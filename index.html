@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Glovera | جلوفيرا</title>
+
+    <meta name="description" content="Glovera - التوهج الأنثوي والبساطة والرقي بأدق التفاصيل.">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: #faf8f3;
+            color: #304538;
+            line-height: 1.8;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* HEADER */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            height: 82px;
+            background: rgba(250,248,243,0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #ebe5db;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 7%;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            font-weight: 600;
+            color: #536d59;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #c48b94;
+        }
+
+        nav {
+            display: flex;
+            gap: 32px;
+            font-size: 14px;
+        }
+
+        nav a {
+            color: #526158;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #bd7e89;
+        }
+
+        .header-btn {
+            background: #3f5d49;
+            color: white;
+            padding: 10px 23px;
+            border-radius: 30px;
+            font-size: 13px;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 680px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+
+            padding: 80px 9%;
+
+            background:
+                radial-gradient(circle at 80% 40%, #e7eee7 0, transparent 32%),
+                #faf8f3;
+        }
+
+        .hero-content {
+            padding-left: 30px;
+        }
+
+        .small-title {
+            color: #b67882;
+            font-size: 12px;
+            letter-spacing: 3px;
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(48px, 6vw, 78px);
+            line-height: 1.15;
+            font-weight: 500;
+            color: #304b3a;
+            margin: 18px 0;
+        }
+
+        .hero h1 span {
+            color: #bd7f89;
+        }
+
+        .hero-description {
+            color: #6f7971;
+            max-width: 480px;
+            font-size: 16px;
+            line-height: 2;
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .main-btn {
+            background: #3f5d49;
+            color: white;
+            padding: 13px 28px;
+            border-radius: 30px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .main-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px #304b3a22;
+        }
+
+        .outline-btn {
+            border: 1px solid #bdc7bd;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 14px;
+            color: #506057;
+        }
+
+        /* HERO PRODUCT */
+
+        .hero-image {
+            height: 520px;
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-circle {
+            position: absolute;
+
+            width: 420px;
+            height: 420px;
+
+            border-radius: 50%;
+
+            background: #e9eee8;
+        }
+
+        .hero-product {
+            position: relative;
+            z-index: 2;
+
+            width: 190px;
+            height: 340px;
+
+            background: linear-gradient(
+                145deg,
+                #ffffff,
+                #e8e4da
+            );
+
+            border-radius: 22px 22px 12px 12px;
+
+            box-shadow:
+                0 30px 60px rgba(48,70,55,0.18);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            flex-direction: column;
+        }
+
+        .hero-product::before {
+            content: "";
+            position: absolute;
+
+            width: 75px;
+            height: 28px;
+
+            background: #4f6656;
+
+            top: -23px;
+
+            border-radius: 7px 7px 2px 2px;
+        }
+
+        .product-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 27px;
+            color: #526d59;
+        }
+
+        .product-line {
+            width: 60px;
+            height: 1px;
+            background: #c58c96;
+            margin: 15px 0;
+        }
+
+        .product-text {
+            font-size: 9px;
+            letter-spacing: 2px;
+            color: #68736c;
+        }
+
+        .flower {
+            position: absolute;
+            font-size: 80px;
+            color: #d39aa2;
+            bottom: 65px;
+            right: 7%;
+            transform: rotate(-12deg);
+        }
+
+        /* SECTION */
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title small {
+            color: #bd7e89;
+            letter-spacing: 3px;
+            font-size: 11px;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 46px;
+            font-weight: 500;
+            color: #304b3a;
+            margin-top: 7px;
+        }
+
+        .section-title p {
+            color: #7a827c;
+            font-size: 14px;
+            max-width: 550px;
+            margin: 10px auto;
+        }
+
+        /* CATEGORIES */
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .category {
+            height: 260px;
+
+            border-radius: 22px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            padding: 30px;
+
+            position: relative;
+            overflow: hidden;
+
+            transition: 0.4s;
+        }
+
+        .category:hover {
+            transform: translateY(-7px);
+        }
+
+        .category:nth-child(1) {
+            background: #eee8df;
+        }
+
+        .category:nth-child(2) {
+            background: #e7eee7;
+        }
+
+        .category:nth-child(3) {
+            background: #f2e3e5;
+        }
+
+        .category::before {
+            content: "";
+            position: absolute;
+
+            width: 180px;
+            height: 180px;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.35);
+
+            top: -50px;
+            left: -40px;
+        }
+
+        .category h3 {
+            position: relative;
+
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #344c3d;
+        }
+
+        .category span {
+            position: relative;
+
+            font-size: 12px;
+            color: #69756d;
+        }
+
+        /* PRODUCTS */
+
+        .products {
+            background: #f4f1ea;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: #fff;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            border: 1px solid #ebe6dc;
+
+            transition: 0.35s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 20px 45px rgba(45,60,48,0.10);
+        }
+
+        .card-image {
+            height: 270px;
+
+            background:
+                radial-gradient(circle, #f7f2ed, #e7eee7);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fake-bottle {
+            width: 105px;
+            height: 190px;
+
+            border-radius: 15px 15px 8px 8px;
+
+            background: linear-gradient(
+                145deg,
+                #fff,
+                #e9e4da
+            );
+
+            box-shadow:
+                0 18px 30px rgba(50,65,55,0.15);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            color: #526b58;
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 17px;
+        }
+
+        .card-info {
+            padding: 20px;
+        }
+
+        .card-info small {
+            color: #bd7d88;
+            font-size: 10px;
+        }
+
+        .card-info h3 {
+            margin: 5px 0;
+
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .card-info p {
+            color: #7a837c;
+            font-size: 11px;
+            min-height: 45px;
+        }
+
+        .price {
+            color: #3f5d49;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        /* INGREDIENTS */
+
+        .ingredients {
+            background: #fbfaf7;
+        }
+
+        .ingredient-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .ingredient {
+            background: white;
+
+            border: 1px solid #ece7de;
+
+            border-radius: 18px;
+
+            padding: 30px 23px;
+
+            min-height: 190px;
+
+            transition: 0.3s;
+        }
+
+        .ingredient:hover {
+            transform: translateY(-5px);
+        }
+
+        .ingredient-number {
+            color: #c48b94;
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+        }
+
+        .ingredient h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 23px;
+            color: #3d5b47;
+            margin: 10px 0;
+        }
+
+        .ingredient p {
+            font-size: 11px;
+            color: #778078;
+            line-height: 1.9;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: #e8eee8;
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 720px;
+            margin: auto;
+        }
+
+        .about h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 500;
+            color: #304b3a;
+        }
+
+        .about p {
+            color: #657168;
+            margin-top: 20px;
+            line-height: 2;
+        }
+
+        .signature {
+            font-family: 'Playfair Display', serif;
+            color: #bd7f89;
+            font-size: 21px;
+            margin-top: 25px;
+        }
+
+        /* CTA */
+
+        .cta {
+            background: #3f5d49;
+            color: white;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 70px 9%;
+        }
+
+        .cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 43px;
+            font-weight: 500;
+        }
+
+        .cta p {
+            color: #dce5de;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        .cta-btn {
+            background: white;
+            color: #3f5d49;
+
+            padding: 13px 28px;
+
+            border-radius: 30px;
+
+            font-size: 14px;
+
+            white-space: nowrap;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #293c30;
+            color: #cfd8d1;
+
+            padding: 45px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            font-size: 11px;
+        }
+
+        footer .logo {
+            color: white;
+        }
+
+        /* MOBILE */
+
+        @media(max-width: 850px) {
+
+            header {
+                padding: 0 5%;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 60px 7%;
+                text-align: center;
+            }
+
+            .hero-content {
+                padding: 0;
+            }
+
+            .hero-description {
+                margin: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image {
+                height: 430px;
+            }
+
+            .categories {
+                grid-template-columns: 1fr;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ingredient-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cta {
+                flex-direction: column;
+                text-align: center;
+                gap: 25px;
+            }
+        }
+
+        @media(max-width: 520px) {
+
+            header {
+                height: 70px;
+            }
+
+            .header-btn {
+                display: none;
+            }
+
+            section {
+                padding: 70px 6%;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero-circle {
+                width: 310px;
+                height: 310px;
+            }
+
+            .hero-product {
+                width: 150px;
+                height: 280px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ingredient-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 38px;
+            }
+
+            .about h2 {
+                font-size: 39px;
+            }
+
+            .cta h2 {
+                font-size: 35px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <a href="#" class="logo">
+        Glo<span>Vera</span>
+    </a>
+
+    <nav>
+        <a href="#home">الرئيسية</a>
+        <a href="#categories">الأقسام</a>
+        <a href="#products">المنتجات</a>
+        <a href="#ingredients">المكونات</a>
+        <a href="#about">عن جلوفيرا</a>
+    </nav>
+
+    <a href="#products" class="header-btn">
+        تسوقي الآن
+    </a>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            GLOVERA • BEAUTY & CARE
+        </div>
+
+        <h1>
+            التوهج الأنثوي<br>
+            <span>بأدق التفاصيل.</span>
+        </h1>
+
+        <p class="hero-description">
+            عناية بسيطة وراقية تجمع بين المكونات الفعالة
+            وروتينك اليومي، لتمنحي بشرتك وشعرك وجسمك
+            العناية التي تستحقينها.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#products" class="main-btn">
+                اكتشفي منتجاتنا
+            </a>
+
+            <a href="#about" class="outline-btn">
+                عن Glovera
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <div class="hero-circle"></div>
+
+        <div class="hero-product">
+
+            <div class="product-logo">
+                Glovera
+            </div>
+
+            <div class="product-line"></div>
+
+            <div class="product-text">
+                BEAUTY & CARE
+            </div>
+
+        </div>
+
+        <div class="flower">
+            ✿
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section id="categories">
+
+    <div class="section-title">
+
+        <small>
+            EXPLORE GLOVERA
+        </small>
+
+        <h2>
+            اختاري عنايتك
+        </h2>
+
+        <p>
+            مجموعة متكاملة للعناية بالبشرة والشعر والجسم.
+        </p>
+
+    </div>
+
+
+    <div class="categories">
+
+        <a href="#products" class="category">
+
+            <h3>البشرة</h3>
+
+            <span>
+                عناية وترطيب وإشراقة
+            </span>
+
+        </a>
+
+
+        <a href="#products" class="category">
+
+            <h3>الشعر</h3>
+
+            <span>
+                تنظيف وترطيب وعناية
+            </span>
+
+        </a>
+
+
+        <a href="#products" class="category">
+
+            <h3>الجسم</h3>
+
+            <span>
+                نعومة وترطيب وتوهج
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section class="products" id="products">
+
+    <div class="section-title">
+
+        <small>
+            GLOVERA COLLECTION
+        </small>
+
+        <h2>
+            منتجات مختارة
+        </h2>
+
+        <p>
+            اكتشفي مجموعة من منتجات Glovera المصممة
+            لتكون جزءًا من روتينك اليومي.
+        </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <article class="card">
+
+            <div class="card-image">
+
+                <div class="fake-bottle">
+                    Glovera
+                </div>
+
+            </div>
+
+            <div class="card-info">
+
+                <small>FACE CARE</small>
+
+                <h3>
+                    Youth Glow Serum
+                </h3>
+
+                <p>
+                    فيتامين C + نياسيناميد + Hyaluronic Acid
+                    للعناية بالإشراقة والترطيب.
+                </p>
+
+                <div class="price">
+                    220 جنيه
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-image">
+
+                <div class="fake-bottle">
+                    Glovera
+                </div>
+
+            </div>
+
+            <div class="card-info">
+
+                <small>FACE CARE</small>
+
+                <h3>
+                    Daily Radiance Gel
+                </h3>
+
+                <p>
+                    جل مرطب بتركيبة خفيفة للاستخدام اليومي.
+                </p>
+
+                <div class="price">
+                    130 جنيه
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-image">
+
+                <div class="fake-bottle">
+                    Glovera
+                </div>
+
+            </div>
+
+            <div class="card-info">
+
+                <small>BODY CARE</small>
+
+                <h3>
+                    Skin Renewal Lotion
+                </h3>
+
+                <p>
+                    يوريا + جليكوليك أسيد للعناية بالبشرة
+                    الجافة والخشنة.
+                </p>
+
+                <div class="price">
+                    165 جنيه
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-image">
+
+                <div class="fake-bottle">
+                    Glovera
+                </div>
+
+            </div>
+
+            <div class="card-info">
+
+                <small>HAIR CARE</small>
+
+                <h3>
+                    Intensive Care Shampoo
+                </h3>
+
+                <p>
+                    تنظيف لطيف وعناية يومية بالشعر.
+                </p>
+
+                <div class="price">
+                    160 جنيه
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- INGREDIENTS -->
+
+<section class="ingredients" id="ingredients">
+
+    <div class="section-title">
+
+        <small>
+            ACTIVE INGREDIENTS
+        </small>
+
+        <h2>
+            رحلة المكونات الفعالة
+        </h2>
+
+        <p>
+            لأن معرفة مكونات منتجاتك جزء من العناية.
+        </p>
+
+    </div>
+
+
+    <div class="ingredient-grid">
+
+
+        <article class="ingredient">
+
+            <div class="ingredient-number">
+                01
+            </div>
+
+            <h3>
+                Niacinamide
+            </h3>
+
+            <p>
+                مكوّن متعدد الاستخدامات يدعم حاجز البشرة
+                ويساعد على تحسين مظهرها.
+            </p>
+
+        </article>
+
+
+        <article class="ingredient">
+
+            <div class="ingredient-number">
+                02
+            </div>
+
+            <h3>
+                Hyaluronic Acid
+            </h3>
+
+            <p>
+                يساعد على جذب الماء والحفاظ على ترطيب
+                البشرة ومظهرها الممتلئ.
+            </p>
+
+        </article>
+
+
+        <article class="ingredient">
+
+            <div class="ingredient-number">
+                03
+            </div>
+
+            <h3>
+                Shea Butter
+            </h3>
+
+            <p>
+                مكوّن غني يساعد على ترطيب وتنعيم البشرة
+                والشعر.
+            </p>
+
+        </article>
+
+
+        <article class="ingredient">
+
+            <div class="ingredient-number">
+                04
+            </div>
+
+            <h3>
+                Urea
+            </h3>
+
+            <p>
+                مكوّن مرطب يساعد على تحسين ملمس البشرة
+                الجافة والخشنة.
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="about-content">
+
+        <div class="small-title">
+            ABOUT GLOVERA
+        </div>
+
+        <h2>
+            عناية تبدأ من التفاصيل.
+        </h2>
+
+        <p>
+            Glovera هي مساحة للعناية تجمع بين البساطة
+            والرقي والاهتمام الحقيقي بالتفاصيل.
+            نؤمن أن روتين العناية لا يحتاج أن يكون معقدًا،
+            بل يحتاج إلى منتجات مفهومة ومكونات فعالة
+            وتجربة جميلة.
+        </p>
+
+        <div class="signature">
+            مصنوعة بحب ♡
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<div class="cta">
+
+    <div>
+
+        <h2>
+            جاهزة تبدأي روتينك؟
+        </h2>
+
+        <p>
+            اختاري منتجاتك وتواصلي معنا مباشرة.
+        </p>
+
+    </div>
+
+    <a
+        class="cta-btn"
+        href="https://wa.me/201000000000"
+        target="_blank"
+    >
+        اطلبي عبر WhatsApp
+    </a>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="logo">
+        Glo<span>Vera</span>
+    </div>
+
+    <div>
+        التوهج الأنثوي والبساطة والرقي بأدق التفاصيل.
+    </div>
+
+    <div>
+        © 2026 Glovera
+    </div>
+
+</footer>
+
+</body>
+  </html>
